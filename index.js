@@ -1,10 +1,10 @@
 const express = require("express");
-const pagina = require("./pagina.js");
+const pagina = require("./src/pagina.js");
 const app = express();
 const port = 3000;
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + `/public/index.html`);
+    res.sendFile(`${__dirname}/public/index.html`);
 });
 
 app.get("/productos", (req, res) => {

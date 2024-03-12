@@ -10,7 +10,7 @@
     "nodemon": "^3.1.0"
   },
   "scripts": {
-    "dev": "nodemon /index"
+    "dev": "nodemon ./src/index"
   },
   "author": "EduardoMMoreno",
   "license": "ISC"
