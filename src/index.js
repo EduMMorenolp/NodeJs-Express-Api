@@ -1,7 +1,9 @@
 const express = require("express");
-const pagina = require("./src/pagina.js");
+const pagina = require("./pagina.js");
 const app = express();
 const port = 3000;
+
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
     res.sendFile(`${__dirname}/public/index.html`);
@@ -15,6 +17,7 @@ app.post("/productos", (req, res) => {
     console.log(req);
     res.send("Agregar producto");
 });
+
 
 app.listen(port, () => {
     console.log(`Server started on port http://localhost:${port}`);
