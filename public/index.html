@@ -31,6 +31,33 @@
 
             <button type="submit">Agregar Producto</button>
         </form>
+
+        <!-- Formulario para eliminar un producto -->
+        <h2>Eliminar Producto</h2>
+        <form id="delete-product-form">
+            <label for="delete-product-id">ID del Producto a Eliminar:</label><br>
+            <input type="number" id="delete-product-id" name="delete-product-id" required><br>
+
+            <button type="submit">Eliminar Producto</button>
+        </form>
+
+        <!-- Formulario para modificar un producto -->
+        <h2>Modificar Producto</h2>
+        <form id="update-product-form">
+            <label for="update-product-id">ID del Producto a Modificar:</label><br>
+            <input type="number" id="update-product-id" name="update-product-id" required><br>
+
+            <label for="new-product-name">Nuevo Nombre del Producto:</label><br>
+            <input type="text" id="new-product-name" name="new-product-name"><br>
+
+            <label for="new-product-price">Nuevo Precio del Producto:</label><br>
+            <input type="number" id="new-product-price" name="new-product-price" step="0.01"><br>
+
+            <label for="new-is-stock">¿En Stock?</label>
+            <input type="checkbox" id="new-is-stock" name="new-is-stock"><br>
+
+            <button type="submit">Modificar Producto</button>
+        </form>
     </main>
 
     <footer>
