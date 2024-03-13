@@ -2,6 +2,12 @@
 
 Esta es una API construida con Node.js y Express para gestionar productos. Permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre productos.
 
+<p align="center">
+  <a href="">
+    <img src="https://skillicons.dev/icons?i=npm,nodejs,express,sequelize&perline=14" />
+  </a>
+</p>
+
 ## Instalación
 
 1. Clona este repositorio en tu máquina local.
