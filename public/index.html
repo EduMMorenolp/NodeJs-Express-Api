@@ -3,27 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lista de Productos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>Inicio</li>
-            <li>Lorem 1</li>
-            <li>Lorem 2</li>
-            <li>Contacto</li>
-            <li>Acerca de</li>
+    <header>
+        <h1>Lista de Productos</h1>
+    </header>
+
+    <main>
+        <!-- Lista de productos -->
+        <ul id="product-list">
+            <!-- Los productos se cargarán aquí dinámicamente -->
         </ul>
-    </nav>
 
-    <h1>Hola mundo desde Inicio</h1>
+        <!-- Formulario para agregar un nuevo producto -->
+        <h2>Agregar Nuevo Producto</h2>
+        <form id="add-product-form">
+            <label for="product-name">Nombre del Producto:</label><br>
+            <input type="text" id="product-name" name="product-name" required><br>
 
-    <button><a href="/productos"> Boton </a></button>
+            <label for="product-price">Precio del Producto:</label><br>
+            <input type="number" id="product-price" name="product-price" step="0.01" required><br>
 
-    <br>
-    
+            <label for="is-stock">¿En Stock?</label>
+            <input type="checkbox" id="is-stock" name="is-stock"><br>
+
+            <button type="submit">Agregar Producto</button>
+        </form>
+    </main>
+
     <footer>
         By Eduardo M Moreno
     </footer>
+
+    <!-- Script JavaScript para manejar la lógica de la página -->
+    <script src="script.js"></script>
 </body>
 </html>

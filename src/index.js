@@ -1,24 +1,24 @@
 const express = require("express");
-const pagina = require("./pagina.js");
-const app = express();
-const port = 3000;
+const bodyParser = require("body-parser");
+const productRouter = require("./router/product.router");
+const app = require("./app/app.js");
+const path = require('path');
 
-app.use(express.static("public"));
+const port = process.env.PORT || 3000;
 
-app.get("/", (req, res) => {
-    res.sendFile(`${__dirname}/public/index.html`);
-});
+// Inicializar la aplicación Express
+const expressApp = express();
 
-app.get("/productos", (req, res) => {
-    res.send(pagina("Server Local"));
-});
+// Utilizar body-parser para parsear solicitudes JSON
+expressApp.use(bodyParser.json());
 
-app.post("/productos", (req, res) => {
-    console.log(req);
-    res.send("Agregar producto");
-});
+// Servir archivos estáticos desde la carpeta 'public'
+expressApp.use(express.static(path.join(__dirname, '../public')));
 
+// Usar el enrutador de productos
+expressApp.use("/", productRouter);
 
-app.listen(port, () => {
-    console.log(`Server started on port http://localhost:${port}`);
+// Arrancar el servidor
+expressApp.listen(port, () => {
+  console.log(`Server is running on port http://localhost:${port}`);
 });
